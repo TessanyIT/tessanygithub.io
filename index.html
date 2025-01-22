@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Programy a Data</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Programy a Data</a></div>
+            <ul class="links">
+                <li><a href="PaD">Programové a datové soubory</a></li>
+                <li><a href="OS">Operační Systémy</a></li>
+                <li><a href="OFU">Ovladače, firmware a utility</a></li>
+                <li><a href="AS">Aplikační software</a></li>
+                <li><a href="IP">Instalace programů</a></li>
+                <li><a href="SL">Softwarové licence</a></li>
+            </ul>
+            <a href="#" class="button">Začátek</a>
+            <div class="toggle_button">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <li><a href="PaD">Programové a datové soubory</a></li>
+                <li><a href="OS">Operační Systémy</a></li>
+                <li><a href="OFU">Ovladače, firmware a utility</a></li>
+                <li><a href="AS">Aplikační software</a></li>
+                <li><a href="IP">Instalace programů</a></li>
+                <li><a href="SL">Softwarové licence</a></li>
+                <li><a href="PaD" class="button">Začátek</a></li>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Programy a Data</h1>
+            <p>Tato stránka slouží jako studijní dokument k školnímu tématu: <br />Programy a Data</p>
+        </section>
+    </main>
+
+    <script>
+        const toggleButton = document.querySelector('.toggle_button');
+        const toggleButtonIcon = document.querySelector('.toggle_button i');
+        const dropDownMenu = document.querySelector('.dropdown_menu');
+
+        toggleButton.onclick = function () {
+            dropDownMenu.classList.toggle('open');
+            const isOpen = dropDownMenu.classList.contains('open');
+
+            toggleButtonIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+        }
+    </script>
+</body>
+</html>
